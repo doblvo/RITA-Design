@@ -1,0 +1,88 @@
+{
+  "version": "0.1.0",
+  "policy": {
+    "operatorSet": [
+      "RAPS",
+      "SHORT",
+      "LONG",
+      "CA"
+    ],
+    "excluded": [
+      "RUNNING",
+      "SUPER FREEZER"
+    ],
+    "unknownBehavior": "preserve-as-manual"
+  },
+  "mappings": [
+    {
+      "label": "SHORT",
+      "sourceCode": "SHO",
+      "componentCode": "PTC",
+      "locations": [
+        "MF-MZ"
+      ],
+      "methods": [
+        "MR"
+      ]
+    },
+    {
+      "label": "LONG",
+      "sourceCode": "LON",
+      "componentCode": "PTL",
+      "locations": [
+        "MF-MZ"
+      ],
+      "methods": [
+        "PI"
+      ]
+    },
+    {
+      "label": "RAPS",
+      "sourceCode": "RAP",
+      "displayCode": "R",
+      "componentCode": "RAP",
+      "locations": [
+        "MF-MZ"
+      ],
+      "methods": [
+        "VI"
+      ],
+      "allowFreeText": true
+    },
+    {
+      "label": "CA",
+      "sourceCode": "CA",
+      "componentCode": "PCA",
+      "locations": [
+        "MF-MZ",
+        "MZ-MF",
+        "MZ"
+      ],
+      "methods": [
+        "PI",
+        "PE",
+        "PC"
+      ]
+    }
+  ],
+  "extendedCatalogMappings": [
+    {
+      "label": "BLUE",
+      "sourceCode": "BLU",
+      "componentCode": "BLU",
+      "availability": "catalog-only"
+    },
+    {
+      "label": "FALLA AL DESPACHO",
+      "sourceCode": "FDP",
+      "componentCode": "FDP",
+      "availability": "catalog-only"
+    },
+    {
+      "label": "QUALITY CONTROL FAILURE",
+      "sourceCode": "QCF",
+      "componentCode": "QCF",
+      "availability": "catalog-only"
+    }
+  ]
+}

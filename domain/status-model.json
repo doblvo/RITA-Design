@@ -1,0 +1,38 @@
+{
+  "version": "0.1.0",
+  "record": [
+    "draft",
+    "complete",
+    "pending_upload",
+    "synced",
+    "error"
+  ],
+  "connection": [
+    "online",
+    "offline",
+    "reconnecting"
+  ],
+  "unit": [
+    "in_progress",
+    "completed",
+    "conflict"
+  ],
+  "photo": [
+    "local",
+    "queued",
+    "uploading",
+    "online",
+    "failed"
+  ],
+  "rule": "Cada estado combina color, icono y texto.",
+  "semantics": {
+    "draft": "Borrador",
+    "complete": "Completa",
+    "pending_upload": "Pendiente de envío",
+    "synced": "Sincronizada",
+    "error": "Error",
+    "in_progress": "En progreso",
+    "completed": "Bloqueada",
+    "conflict": "Conflicto"
+  }
+}

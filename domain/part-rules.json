@@ -1,0 +1,45 @@
+{
+  "version": "0.1.0",
+  "selection": "explicit",
+  "fields": [
+    {
+      "name": "pn",
+      "label": "PN",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "description",
+      "label": "Descripción",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "quantity",
+      "label": "Cantidad",
+      "required": true,
+      "type": "number",
+      "min": 0.01
+    },
+    {
+      "name": "unit",
+      "label": "Unidad",
+      "required": true,
+      "allowed": [
+        "unidad",
+        "pies",
+        "cm"
+      ]
+    }
+  ],
+  "ux": {
+    "addAction": "AGREGAR ESTE REPUESTO",
+    "listTitle": "Repuestos añadidos",
+    "accent": "copper",
+    "suggestionsMax": 5
+  },
+  "prohibitions": [
+    "no asignar PN automáticamente desde CEDEX",
+    "no heredar valores de otra unidad"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "version": "0.1.0",
+  "labels": {
+    "code": "ISO Code",
+    "component": "Componente",
+    "location": "Ubicación",
+    "damage": "Daño",
+    "method": "Método",
+    "responsibility": "Responsabilidad"
+  },
+  "line": {
+    "required": [
+      "code",
+      "location",
+      "damage",
+      "method",
+      "responsibility"
+    ],
+    "photos": {
+      "max": 5,
+      "groupBy": "code"
+    },
+    "parts": {
+      "manualSelectionRequired": true,
+      "autoAssignFromCedex": false
+    }
+  },
+  "locationRules": [
+    "normalizar mayúsculas y espacios",
+    "preservar ubicaciones compuestas como MF-MZ",
+    "permitir sufijo NN cuando el catálogo lo requiera",
+    "no inventar una ubicación"
+  ],
+  "fallback": "Si no hay match, conservar valor manual y marcar revisión."
+}
