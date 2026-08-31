@@ -1,0 +1,33 @@
+{
+  "unitId": "demo-unit-001",
+  "iso6346": "MSCU1234567",
+  "status": "in_progress",
+  "pti": {
+    "label": "RAPS",
+    "displayCode": "R",
+    "known": true
+  },
+  "manufacturer": "",
+  "model": "",
+  "controller": "",
+  "serial": "",
+  "gasCharge": "",
+  "manufacturedMonth": "",
+  "cedexLines": [
+    {
+      "id": "damage-001",
+      "code": "RAP",
+      "location": "MF-MZ",
+      "damage": "",
+      "method": "VI",
+      "responsibility": "",
+      "parts": [],
+      "photos": []
+    }
+  ],
+  "sync": {
+    "record": "draft",
+    "connection": "offline",
+    "revision": 0
+  }
+}

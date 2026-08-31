@@ -1,0 +1,14 @@
+{
+  "id": "damage-demo-001",
+  "code": "PTC",
+  "location": "MF-MZ",
+  "damage": "",
+  "method": "MR",
+  "responsibility": "",
+  "parts": [],
+  "photos": [],
+  "validation": {
+    "catalog": "pending",
+    "manualAllowed": true
+  }
+}
