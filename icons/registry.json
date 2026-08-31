@@ -1,0 +1,296 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "defaultSize": 24,
+    "stroke": "currentColor",
+    "strokeWidth": 1.8
+  },
+  "rules": {
+    "lineCap": "round",
+    "lineJoin": "round",
+    "minimumSize": "16px",
+    "touchTarget": "44px"
+  },
+  "icons": [
+    {
+      "name": "plus",
+      "category": "action",
+      "aliases": [
+        "add"
+      ],
+      "label": "Agregar"
+    },
+    {
+      "name": "search",
+      "category": "action",
+      "aliases": [
+        "find"
+      ],
+      "label": "Buscar"
+    },
+    {
+      "name": "edit",
+      "category": "action",
+      "aliases": [
+        "change"
+      ],
+      "label": "Editar"
+    },
+    {
+      "name": "save",
+      "category": "action",
+      "aliases": [
+        "store"
+      ],
+      "label": "Guardar"
+    },
+    {
+      "name": "sync",
+      "category": "action",
+      "aliases": [
+        "retry"
+      ],
+      "label": "Sincronizar"
+    },
+    {
+      "name": "trash",
+      "category": "action",
+      "aliases": [
+        "delete"
+      ],
+      "label": "Eliminar"
+    },
+    {
+      "name": "close",
+      "category": "action",
+      "aliases": [
+        "dismiss"
+      ],
+      "label": "Cerrar"
+    },
+    {
+      "name": "filter",
+      "category": "action",
+      "aliases": [
+        "refine"
+      ],
+      "label": "Filtrar"
+    },
+    {
+      "name": "more-horizontal",
+      "category": "action",
+      "aliases": [
+        "actions"
+      ],
+      "label": "Más acciones"
+    },
+    {
+      "name": "chevron-down",
+      "category": "navigation",
+      "aliases": [
+        "expand"
+      ],
+      "label": "Abrir opciones"
+    },
+    {
+      "name": "arrow-left",
+      "category": "navigation",
+      "aliases": [
+        "back"
+      ],
+      "label": "Volver"
+    },
+    {
+      "name": "menu",
+      "category": "navigation",
+      "aliases": [
+        "navigation"
+      ],
+      "label": "Menú"
+    },
+    {
+      "name": "home",
+      "category": "navigation",
+      "aliases": [
+        "start"
+      ],
+      "label": "Inicio"
+    },
+    {
+      "name": "unit",
+      "category": "domain",
+      "aliases": [
+        "container"
+      ],
+      "label": "Unidad reefer"
+    },
+    {
+      "name": "reefer",
+      "category": "domain",
+      "aliases": [
+        "refrigerated"
+      ],
+      "label": "Equipo reefer"
+    },
+    {
+      "name": "cedex",
+      "category": "domain",
+      "aliases": [
+        "iso-code"
+      ],
+      "label": "ISO Code / CEDEX"
+    },
+    {
+      "name": "pti",
+      "category": "domain",
+      "aliases": [
+        "inspection"
+      ],
+      "label": "PTI"
+    },
+    {
+      "name": "part",
+      "category": "domain",
+      "aliases": [
+        "spare-part"
+      ],
+      "label": "Repuesto"
+    },
+    {
+      "name": "serial",
+      "category": "domain",
+      "aliases": [
+        "plate"
+      ],
+      "label": "Serie / placa"
+    },
+    {
+      "name": "gas",
+      "category": "domain",
+      "aliases": [
+        "charge"
+      ],
+      "label": "Carga de gas"
+    },
+    {
+      "name": "calendar",
+      "category": "domain",
+      "aliases": [
+        "manufacturing"
+      ],
+      "label": "Fabricación"
+    },
+    {
+      "name": "camera",
+      "category": "evidence",
+      "aliases": [
+        "photo"
+      ],
+      "label": "Agregar foto"
+    },
+    {
+      "name": "image",
+      "category": "evidence",
+      "aliases": [
+        "gallery"
+      ],
+      "label": "Abrir evidencia"
+    },
+    {
+      "name": "scan",
+      "category": "capture",
+      "aliases": [
+        "ocr"
+      ],
+      "label": "Detectar placa"
+    },
+    {
+      "name": "cloud",
+      "category": "sync",
+      "aliases": [
+        "online"
+      ],
+      "label": "Nube"
+    },
+    {
+      "name": "cloud-off",
+      "category": "sync",
+      "aliases": [
+        "offline"
+      ],
+      "label": "Sin conexión"
+    },
+    {
+      "name": "clock",
+      "category": "sync",
+      "aliases": [
+        "pending"
+      ],
+      "label": "Pendiente"
+    },
+    {
+      "name": "check",
+      "category": "status",
+      "aliases": [
+        "complete"
+      ],
+      "label": "Completo"
+    },
+    {
+      "name": "alert-triangle",
+      "category": "status",
+      "aliases": [
+        "warning"
+      ],
+      "label": "Revisión necesaria"
+    },
+    {
+      "name": "x-circle",
+      "category": "status",
+      "aliases": [
+        "error"
+      ],
+      "label": "Error"
+    },
+    {
+      "name": "info",
+      "category": "status",
+      "aliases": [
+        "help"
+      ],
+      "label": "Información"
+    },
+    {
+      "name": "user",
+      "category": "people",
+      "aliases": [
+        "technician"
+      ],
+      "label": "Técnico"
+    },
+    {
+      "name": "users",
+      "category": "people",
+      "aliases": [
+        "team"
+      ],
+      "label": "Técnicos"
+    },
+    {
+      "name": "lock",
+      "category": "security",
+      "aliases": [
+        "locked"
+      ],
+      "label": "Bloqueado"
+    },
+    {
+      "name": "unlock",
+      "category": "security",
+      "aliases": [
+        "reopen"
+      ],
+      "label": "Volver a progreso"
+    }
+  ]
+}

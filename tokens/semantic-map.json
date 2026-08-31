@@ -1,0 +1,33 @@
+{
+  "action.primary": {
+    "value": "color.raw.glacier",
+    "meaning": "guardar, abrir, sincronizar"
+  },
+  "domain.cedex": {
+    "value": "color.raw.glacier",
+    "meaning": "ISO Code / CEDEX"
+  },
+  "domain.part": {
+    "value": "color.raw.copper",
+    "meaning": "PN, cantidad, unidades"
+  },
+  "domain.pti": {
+    "value": "color.raw.glacierBright",
+    "meaning": "tipo de PTI"
+  },
+  "status.offline": {
+    "value": "color.raw.copper",
+    "pairedWith": "cloud-off",
+    "meaning": "pendiente local"
+  },
+  "status.success": {
+    "value": "color.raw.success",
+    "pairedWith": "check",
+    "meaning": "confirmado"
+  },
+  "status.error": {
+    "value": "color.raw.danger",
+    "pairedWith": "x-circle",
+    "meaning": "requiere acción"
+  }
+}
