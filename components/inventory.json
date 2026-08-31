@@ -1,0 +1,464 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "touchMinimum": "44px",
+    "baseGrid": "4px"
+  },
+  "components": [
+    {
+      "name": "Button",
+      "variants": [
+        "primary",
+        "secondary",
+        "quiet",
+        "danger"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled",
+        "loading",
+        "offline"
+      ],
+      "domain": "action"
+    },
+    {
+      "name": "IconButton",
+      "variants": [
+        "default",
+        "danger",
+        "selected"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "domain": "action"
+    },
+    {
+      "name": "TextField",
+      "variants": [
+        "text",
+        "serial",
+        "search",
+        "number"
+      ],
+      "states": [
+        "empty",
+        "filled",
+        "focus",
+        "error",
+        "disabled",
+        "offline"
+      ],
+      "domain": "form"
+    },
+    {
+      "name": "Textarea",
+      "variants": [
+        "damage"
+      ],
+      "states": [
+        "empty",
+        "filled",
+        "focus",
+        "error",
+        "disabled"
+      ],
+      "domain": "form"
+    },
+    {
+      "name": "CatalogCombobox",
+      "variants": [
+        "iso-code",
+        "model",
+        "component",
+        "part"
+      ],
+      "states": [
+        "loading",
+        "match",
+        "manual",
+        "empty",
+        "error"
+      ],
+      "domain": "catalog"
+    },
+    {
+      "name": "SelectField",
+      "variants": [
+        "pti",
+        "manufacturer",
+        "controller",
+        "gas"
+      ],
+      "states": [
+        "empty",
+        "selected",
+        "disabled",
+        "error"
+      ],
+      "domain": "form"
+    },
+    {
+      "name": "ManualPlateField",
+      "variants": [
+        "plate",
+        "detect"
+      ],
+      "states": [
+        "empty",
+        "detected",
+        "editable",
+        "processing",
+        "error"
+      ],
+      "domain": "capture"
+    },
+    {
+      "name": "ManufacturingMonthField",
+      "variants": [
+        "MM/YYYY"
+      ],
+      "states": [
+        "empty",
+        "valid",
+        "invalid"
+      ],
+      "domain": "form"
+    },
+    {
+      "name": "GasChargeField",
+      "variants": [
+        "preset",
+        "manual"
+      ],
+      "states": [
+        "empty",
+        "preset",
+        "manual",
+        "invalid"
+      ],
+      "domain": "form"
+    },
+    {
+      "name": "UnitSearch",
+      "variants": [
+        "single-unit",
+        "recent-cache"
+      ],
+      "states": [
+        "empty",
+        "searching",
+        "found",
+        "not-found",
+        "offline"
+      ],
+      "domain": "navigation"
+    },
+    {
+      "name": "UnitCard",
+      "variants": [
+        "progress",
+        "completed",
+        "pending"
+      ],
+      "states": [
+        "default",
+        "locked",
+        "conflict",
+        "offline"
+      ],
+      "domain": "data"
+    },
+    {
+      "name": "UnitSummary",
+      "variants": [
+        "plate",
+        "pti",
+        "progress"
+      ],
+      "states": [
+        "loading",
+        "populated",
+        "stale"
+      ],
+      "domain": "data"
+    },
+    {
+      "name": "PtiSelector",
+      "variants": [
+        "core-pti"
+      ],
+      "states": [
+        "empty",
+        "selected",
+        "manual",
+        "excluded"
+      ],
+      "domain": "domain"
+    },
+    {
+      "name": "PtiSummary",
+      "variants": [
+        "generated-line"
+      ],
+      "states": [
+        "known",
+        "manual",
+        "pending-review"
+      ],
+      "domain": "domain"
+    },
+    {
+      "name": "CedexLine",
+      "variants": [
+        "repair-line"
+      ],
+      "states": [
+        "empty",
+        "complete",
+        "invalid",
+        "locked"
+      ],
+      "domain": "domain"
+    },
+    {
+      "name": "CedexLocationField",
+      "variants": [
+        "location",
+        "suffix"
+      ],
+      "states": [
+        "empty",
+        "exact",
+        "manual",
+        "invalid"
+      ],
+      "domain": "domain"
+    },
+    {
+      "name": "DamageMethodPair",
+      "variants": [
+        "damage",
+        "compatible-method"
+      ],
+      "states": [
+        "empty",
+        "compatible",
+        "incompatible",
+        "invalid"
+      ],
+      "domain": "domain"
+    },
+    {
+      "name": "ResponsibilityField",
+      "variants": [
+        "per-cedex"
+      ],
+      "states": [
+        "empty",
+        "selected",
+        "invalid"
+      ],
+      "domain": "domain"
+    },
+    {
+      "name": "PartsEditor",
+      "variants": [
+        "manual-pn"
+      ],
+      "states": [
+        "empty",
+        "searching",
+        "selected",
+        "duplicate",
+        "invalid"
+      ],
+      "domain": "domain"
+    },
+    {
+      "name": "PhotoEvidence",
+      "variants": [
+        "max-five-per-line"
+      ],
+      "states": [
+        "empty",
+        "adding",
+        "queued",
+        "uploaded",
+        "failed"
+      ],
+      "domain": "evidence"
+    },
+    {
+      "name": "PhotoGrid",
+      "variants": [
+        "small-thumbnails"
+      ],
+      "states": [
+        "empty",
+        "local",
+        "online",
+        "failed"
+      ],
+      "domain": "evidence"
+    },
+    {
+      "name": "StatusBadge",
+      "variants": [
+        "domain-statuses"
+      ],
+      "states": [
+        "draft",
+        "complete",
+        "pending",
+        "synced",
+        "error",
+        "offline"
+      ],
+      "domain": "feedback"
+    },
+    {
+      "name": "InlineValidation",
+      "variants": [
+        "field-message"
+      ],
+      "states": [
+        "info",
+        "warning",
+        "error",
+        "success"
+      ],
+      "domain": "feedback"
+    },
+    {
+      "name": "OfflineBanner",
+      "variants": [
+        "connection"
+      ],
+      "states": [
+        "online",
+        "offline",
+        "reconnecting"
+      ],
+      "domain": "sync"
+    },
+    {
+      "name": "SyncQueue",
+      "variants": [
+        "pending-work"
+      ],
+      "states": [
+        "idle",
+        "syncing",
+        "success",
+        "error",
+        "retry"
+      ],
+      "domain": "sync"
+    },
+    {
+      "name": "ConflictPanel",
+      "variants": [
+        "revision-mismatch"
+      ],
+      "states": [
+        "review",
+        "keep-local",
+        "use-server",
+        "merged"
+      ],
+      "domain": "sync"
+    },
+    {
+      "name": "Dialog",
+      "variants": [
+        "bounded-modal"
+      ],
+      "states": [
+        "open",
+        "closing",
+        "blocked"
+      ],
+      "domain": "overlay"
+    },
+    {
+      "name": "Drawer",
+      "variants": [
+        "mobile-details"
+      ],
+      "states": [
+        "open",
+        "closing"
+      ],
+      "domain": "overlay"
+    },
+    {
+      "name": "Toast",
+      "variants": [
+        "short-feedback"
+      ],
+      "states": [
+        "success",
+        "warning",
+        "error",
+        "offline"
+      ],
+      "domain": "feedback"
+    },
+    {
+      "name": "NavigationShell",
+      "variants": [
+        "header+nav"
+      ],
+      "states": [
+        "mobile",
+        "desktop",
+        "authenticated"
+      ],
+      "domain": "navigation"
+    },
+    {
+      "name": "AdminUsersModal",
+      "variants": [
+        "multi-user-control"
+      ],
+      "states": [
+        "pending",
+        "active",
+        "disabled",
+        "editing"
+      ],
+      "domain": "security"
+    },
+    {
+      "name": "EmptyState",
+      "variants": [
+        "no-results"
+      ],
+      "states": [
+        "search",
+        "catalog",
+        "photos",
+        "queue"
+      ],
+      "domain": "feedback"
+    },
+    {
+      "name": "Skeleton",
+      "variants": [
+        "loading-placeholder"
+      ],
+      "states": [
+        "text",
+        "row",
+        "card"
+      ],
+      "domain": "feedback"
+    }
+  ]
+}
