@@ -1,44 +1,224 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RITA Design System — Preview</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RITA Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--g:#075f62;--gb:#129a9a;--gd:#0a4a4d;--c:#b96d3d;--ink:#101718;--sl:#526061;--ice:#f6f8f8;--w:#fff;--bd:#dce3e3;--bs:#bac5c5;--ok:#148a62;--wa:#a96708;--er:#c73b4a;--shadow:0 10px 32px rgba(5,37,40,.08);--mono:"JetBrains Mono",Consolas,monospace;--ui:Inter,Segoe UI,sans-serif;--display:Manrope,Inter,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ice);color:var(--ink);font:14px/1.4 var(--ui)}a{color:inherit}.shell{max-width:1240px;margin:auto;padding:0 24px}.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px max(24px,calc((100vw - 1240px)/2));border-bottom:1px solid var(--bd);background:rgba(255,255,255,.93);backdrop-filter:blur(16px)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none}.mark{width:38px;height:38px;display:grid;place-items:center;border-radius:12px 12px 12px 4px;background:var(--g);color:#fff;font:bold 20px var(--display)}.brand strong{font:800 18px var(--display);letter-spacing:-.04em}.brand small{display:block;color:#758384;font-size:9px;letter-spacing:.16em}.nav{display:flex;gap:14px;overflow:auto;color:var(--sl);font-size:11px;white-space:nowrap}.nav a{text-decoration:none}.nav a:hover{color:var(--g)}.hero{margin:36px 0 24px;display:grid;grid-template-columns:1.3fr .7fr;gap:24px;padding:46px;border-radius:28px;background:linear-gradient(135deg,var(--g),var(--gd));color:#fff;box-shadow:var(--shadow)}.eyebrow{font:700 11px var(--mono);letter-spacing:.13em;color:#a6e8e5;text-transform:uppercase}.hero h1{max-width:700px;margin:12px 0 10px;font:800 clamp(38px,6vw,76px)/.98 var(--display);letter-spacing:-.065em}.hero p{max-width:620px;margin:0;color:#d6f3f1;font-size:16px}.hero-side{align-self:end;display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat{padding:18px;border:1px solid rgba(255,255,255,.2);border-radius:16px;background:rgba(255,255,255,.1)}.stat b{display:block;font:800 30px var(--display)}.stat span{font-size:11px;color:#c7e9e7}.section{padding:38px 0;border-top:1px solid var(--bd)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:20px}.section h2{margin:0;font:800 32px var(--display);letter-spacing:-.05em}.section-head p{max-width:600px;margin:0;color:var(--sl);font-size:13px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.card{padding:20px;border:1px solid var(--bd);border-radius:18px;background:var(--w);box-shadow:0 2px 8px rgba(5,37,40,.04)}.card h3{margin:0 0 12px;font:750 17px var(--display)}.muted{color:#758384}.mono{font-family:var(--mono)}.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.swatch{height:92px;padding:10px;display:flex;flex-direction:column;justify-content:end;border-radius:12px;color:#fff;font-size:10px}.swatch.light{color:var(--ink);border:1px solid var(--bd)}.type-sample{display:grid;gap:14px}.type-sample h1,.type-sample h2,.type-sample p{margin:0}.type-sample h1{font:800 38px var(--display);letter-spacing:-.06em}.type-sample h2{font:700 20px var(--display)}.type-sample p{font:14px var(--ui)}.type-sample code{font:700 14px var(--mono)}.ruler{display:flex;align-items:end;gap:8px;height:80px}.ruler i{display:block;width:24px;background:var(--gb);border-radius:4px 4px 0 0}.ruler span{display:grid;gap:4px;text-align:center;font-size:9px;color:var(--sl)}.radii{display:flex;gap:10px;flex-wrap:wrap}.radius{width:70px;height:50px;display:grid;place-items:center;border:1px solid var(--g);background:#eafbfa;color:var(--g);font:10px var(--mono)}.component-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}.button-row{display:flex;gap:8px;flex-wrap:wrap}.btn{min-height:44px;padding:0 16px;border:1px solid var(--bd);border-radius:8px;font-weight:750;background:#fff;color:var(--ink)}.btn.primary{border-color:var(--g);background:var(--g);color:#fff}.btn.copper{border-color:var(--c);background:var(--c);color:#fff}.btn.quiet{border:0;color:var(--g);background:#eafbfa}.field{display:grid;gap:6px;margin-top:12px}.field label{font-size:11px;font-weight:750;color:var(--sl)}.input{min-height:44px;display:flex;align-items:center;padding:0 12px;border:1px solid var(--bs);border-radius:8px;background:#fff}.input.focus{border-color:var(--gb);box-shadow:0 0 0 3px rgba(103,210,207,.35)}.badges{display:flex;gap:8px;flex-wrap:wrap}.badge{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:750}.badge.offline{color:#835005;background:#fff4d9}.badge.success{color:#0b6d4c;background:#e7f6ef}.badge.error{color:#8c2230;background:#fff0f2}.badge.teal{color:var(--g);background:#eafbfa}.unit{display:grid;gap:12px}.unit-top{display:flex;justify-content:space-between;gap:10px}.unit h3{margin:0;font:800 20px var(--mono)}.facts{display:flex;gap:8px;flex-wrap:wrap}.fact{padding:8px 10px;border-radius:8px;background:var(--ice);font-size:11px}.cedex{border-left:5px solid var(--g)}.part{border-left:5px solid var(--c)}.line{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--bd)}.line:last-child{border-bottom:0}.photos{display:flex;gap:8px}.photo{width:58px;height:58px;display:grid;place-items:center;border:1px dashed var(--bs);border-radius:8px;background:var(--ice);color:var(--sl);font-size:10px}.icon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(116px,1fr));gap:10px}.icon{min-height:92px;display:grid;place-items:center;align-content:center;gap:7px;border:1px solid var(--bd);border-radius:12px;background:#fff;color:var(--g);text-align:center;font-size:10px}.icon img{width:26px;height:26px}.icon b{font:600 10px var(--mono);color:var(--ink)}.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0}.step{position:relative;padding:16px 12px 12px;border-top:4px solid var(--bd);background:#fff}.step:before{content:"";position:absolute;top:-10px;left:12px;width:14px;height:14px;border-radius:50%;background:var(--bd)}.step.active{border-color:var(--g)}.step.active:before{background:var(--g)}.step strong{display:block;font-size:12px}.step small{color:var(--sl);font-size:10px}.footer{padding:40px 0 70px;color:var(--sl);font-size:12px}.footer a{color:var(--g);font-weight:700}@media(max-width:760px){.top{align-items:flex-start;padding:11px 14px}.nav{display:none}.shell{padding:0 14px}.hero{grid-template-columns:1fr;padding:28px 22px;border-radius:20px}.hero h1{font-size:48px}.hero-side{grid-template-columns:repeat(3,1fr)}.stat{padding:12px}.stat b{font-size:22px}.section{padding:28px 0}.section-head{display:grid}.timeline{grid-template-columns:1fr}.step{border-top:0;border-left:4px solid var(--bd);padding-left:18px}.step:before{top:18px;left:-9px}.step.active{border-color:var(--g)}.swatches{grid-template-columns:repeat(2,1fr)}}
+:root{
+  --glacier:#075f62;--bright:#129a9a;--glacier-50:#eafbfa;--glacier-100:#cff3f1;
+  --copper:#b96d3d;--ink:#101718;--slate:#697879;--alloy:#d7dede;
+  --ice:#f6f8f8;--white:#fff;--line:#dfe6e6;--success:#148a62;
+  --mono:"JetBrains Mono",Consolas,monospace;--ui:Inter,Arial,sans-serif;
+  --display:Manrope,Inter,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--ink);font:14px/1.5 var(--ui)}
+a{color:inherit}
+button{font:inherit}
+.page-top{height:70px;position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:0 28px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.94);backdrop-filter:blur(18px)}
+.wordmark{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-symbol{width:34px;height:34px;display:grid;place-items:center;border-radius:11px;background:var(--glacier);color:#fff;font:700 17px var(--display);position:relative;overflow:hidden}
+.logo-symbol:after{content:"✣";position:absolute;font-size:15px;opacity:.92}
+.logo-symbol span{opacity:0}
+.wordmark-name{font:800 16px var(--display);letter-spacing:-.05em}
+.wordmark-sub{display:block;margin-top:-2px;color:#8a9696;font:500 9px var(--mono);letter-spacing:.04em}
+.version{padding:7px 11px;border:1px solid var(--line);border-radius:99px;background:var(--ice);color:var(--slate);font:600 10px var(--mono)}
+.theme{width:38px;height:38px;margin-left:8px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--slate);cursor:pointer;font-size:18px}
+.top-actions{display:flex;align-items:center}
+.layout{display:grid;grid-template-columns:232px minmax(0,1fr);min-height:calc(100vh - 70px)}
+.sidebar{position:sticky;top:70px;height:calc(100vh - 70px);display:flex;flex-direction:column;padding:28px 18px 18px;border-right:1px solid var(--line);background:#fff}
+.side-label{padding:0 12px 12px;color:#849090;font:600 10px var(--mono);letter-spacing:.14em}
+.side-nav{display:grid;gap:3px}
+.side-nav a{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:10px;color:var(--slate);font-weight:600;text-decoration:none}
+.side-nav a:hover,.side-nav a.active{background:var(--glacier-50);color:var(--glacier)}
+.nav-icon{width:18px;height:18px;display:grid;place-items:center;color:currentColor;font-size:16px}
+.live-card{margin-top:auto;padding:13px 12px;border:1px solid var(--line);border-radius:12px;background:var(--ice)}
+.live-title{display:flex;align-items:center;gap:7px;font-weight:700;font-size:11px}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--success);box-shadow:0 0 0 4px #dff3eb}
+.live-card p{margin:5px 0 0 14px;color:var(--slate);font-size:10px}
+.content{min-width:0;overflow:hidden}
+.section-inner{max-width:1100px;margin:0 auto;padding:0 54px}
+.hero{min-height:645px;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:55px;padding:74px 54px 42px;background:
+ radial-gradient(circle at 90% 75%,rgba(7,95,98,.12) 0 8%,transparent 8.3% 14%,rgba(7,95,98,.07) 14.3% 15%,transparent 15.3%),
+ linear-gradient(120deg,#fff 10%,#fbfdfd 52%,#edf9f8 100%);border-bottom:1px solid var(--line)}
+.hero-copy{max-width:520px}
+.kicker{display:flex;align-items:center;gap:14px;color:var(--glacier);font:600 11px var(--mono);letter-spacing:.13em}
+.kicker:after{content:"";height:1px;width:36px;background:var(--alloy)}
+.hero h1{margin:22px 0 18px;font:800 clamp(48px,6vw,78px)/.97 var(--display);letter-spacing:-.075em}
+.hero h1 span{display:block;color:var(--bright)}
+.hero-lead{max-width:500px;margin:0;color:#526061;font-size:16px;line-height:1.6}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.tag{padding:6px 10px;border:1px solid var(--line);border-radius:5px;background:#fff;color:var(--slate);font:500 10px var(--mono)}
+.assistance{justify-self:end;width:min(100%,490px);transform:rotate(1.3deg);filter:drop-shadow(0 22px 25px rgba(5,37,40,.14))}
+.assist-window{overflow:hidden;border:1px solid #d1dddd;border-radius:17px;background:#fff}
+.assist-bar{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-bottom:1px solid var(--line);background:#f3f8f8;font-size:10px}
+.assist-brand{display:flex;align-items:center;gap:7px;color:var(--glacier);font:700 11px var(--display)}
+.assist-brand i{width:16px;height:16px;display:grid;place-items:center;border-radius:5px;background:var(--glacier);color:#fff;font-style:normal;font-size:9px}
+.sync{display:flex;align-items:center;gap:5px;color:var(--success);font-size:10px}
+.sync i{width:6px;height:6px;border-radius:50%;background:var(--success)}
+.assist-body{padding:25px 25px 22px}
+.assist-overline{color:#849090;font:600 9px var(--mono);letter-spacing:.14em}
+.assist-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:8px}
+.assist-heading strong{font:800 23px var(--display);letter-spacing:-.05em}
+.status-pill{padding:7px 10px;border-radius:99px;background:#e5f6ef;color:#148a62;font-size:10px;font-weight:700}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:19px}
+.metric{padding:13px 11px;border:1px solid var(--line);border-radius:10px;background:var(--ice)}
+.metric small{display:block;color:#7a8989;font-size:9px}.metric b{display:block;margin-top:2px;font:700 17px var(--mono)}
+.progress-label{display:flex;justify-content:space-between;margin-top:22px;color:#718080;font-size:10px}.progress-label b{color:var(--ink)}
+.progress{height:4px;margin-top:7px;border-radius:4px;background:#e6eeee;overflow:hidden}.progress span{display:block;width:74%;height:100%;background:var(--bright)}
+.assist-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:20px}
+.btn{min-height:40px;padding:0 14px;border:1px solid #d5dddd;border-radius:7px;background:#fff;color:var(--ink);font-size:11px;font-weight:700}
+.btn.primary{border-color:var(--glacier);background:var(--glacier);color:#fff}.btn.copper{border-color:var(--copper);background:var(--copper);color:#fff}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+.principle{min-height:145px;padding:28px 36px;border-right:1px solid var(--line)}
+.principle:last-child{border-right:0}
+.principle-num{color:var(--glacier);font:600 10px var(--mono)}
+.principle h3{margin:15px 0 5px;font:700 18px var(--display);letter-spacing:-.04em}
+.principle p{margin:0;color:#788686;font-size:12px}
+.section{padding:76px 0;border-bottom:1px solid var(--line)}
+.section-head{display:grid;grid-template-columns:220px 1fr;gap:50px;margin-bottom:34px}
+.section-number{color:var(--glacier);font:600 11px var(--mono);letter-spacing:.12em}
+.section-title h2{margin:0;font:700 clamp(30px,4vw,50px)/1.05 var(--display);letter-spacing:-.065em}
+.section-title h2 em{color:var(--bright);font-style:normal}
+.section-title p{max-width:570px;margin:15px 0 0;color:#6b7979;font-size:14px}
+.card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{padding:25px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.card h3{margin:0 0 17px;font:700 17px var(--display);letter-spacing:-.035em}
+.card-label{margin-bottom:13px;color:#8a9696;font:600 10px var(--mono);letter-spacing:.12em}
+.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.swatch{min-height:106px;display:flex;flex-direction:column;justify-content:flex-end;padding:10px;border-radius:8px;color:#fff;font:500 10px var(--mono)}
+.swatch.light{border:1px solid var(--line);color:var(--ink)}
+.palette-wide{grid-column:span 2}
+.palette-row{display:grid;grid-template-columns:repeat(10,1fr);gap:5px}
+.palette-cell{height:52px;display:flex;align-items:flex-end;padding:6px;border-radius:5px;color:#fff;font:500 8px var(--mono)}
+.palette-cell.light{color:var(--ink);border:1px solid var(--line)}
+.type-card{display:grid;gap:16px}
+.type-line{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-bottom:13px;border-bottom:1px solid var(--line)}
+.type-line:last-child{border-bottom:0;padding-bottom:0}
+.type-line small{color:#8a9696;font:500 9px var(--mono);white-space:nowrap}
+.type-display{font:800 34px var(--display);letter-spacing:-.06em}.type-heading{font:700 23px var(--display)}.type-body{color:#697879;font-size:14px}.type-code{font:600 15px var(--mono)}
+.spacing-show{display:flex;align-items:flex-end;gap:12px;height:120px}.spacing-show div{display:grid;gap:5px;text-align:center;color:#7a8989;font:500 9px var(--mono)}.spacing-show i{display:block;width:28px;border-radius:4px 4px 0 0;background:var(--bright)}
+.radii-grid{display:flex;flex-wrap:wrap;gap:10px}.radius{display:grid;place-items:center;width:80px;height:55px;border:1px solid var(--glacier);background:var(--glacier-50);color:var(--glacier);font:500 9px var(--mono)}
+.component-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.component-card{min-height:230px;padding:22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.component-card h3{margin:0 0 15px;font:700 15px var(--display)}
+.button-stack{display:flex;flex-wrap:wrap;gap:7px}.button-stack .btn{min-height:37px;padding:0 11px;font-size:10px}
+.field{display:grid;gap:6px;margin-top:12px}.field label{color:#718080;font:600 9px var(--mono);letter-spacing:.08em}.input{min-height:41px;display:flex;align-items:center;padding:0 11px;border:1px solid #bac5c5;border-radius:7px;color:#6d7a7a;font-size:11px}.input.focus{border-color:var(--bright);box-shadow:0 0 0 3px rgba(103,210,207,.24);color:var(--ink)}
+.status-list{display:grid;gap:8px}.status{display:flex;align-items:center;gap:9px;padding:10px;border-radius:7px;background:var(--ice);font-size:11px}.status i{width:8px;height:8px;border-radius:50%;background:var(--bright)}.status.off i{background:#d8952b}.status.err i{background:#c73b4a}.status.ok i{background:var(--success)}
+.reefer-card{display:grid;gap:16px;grid-template-columns:1.1fr .9fr;align-items:center;padding:25px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(110deg,#fff,#f3fbfa)}
+.reefer-code{font:700 28px var(--mono);letter-spacing:-.06em}.reefer-card p{margin:4px 0 0;color:#758384;font-size:12px}.facts{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}.fact{padding:8px 10px;border-radius:6px;background:var(--ice);color:#526061;font:500 10px var(--mono)}.fact b{color:var(--glacier)}
+.cedex-lines{display:grid;gap:7px}.cedex-line{display:flex;justify-content:space-between;gap:10px;padding:11px 12px;border-left:3px solid var(--glacier);border-radius:5px;background:var(--ice);font-size:11px}.cedex-line b{font-family:var(--mono)}.cedex-line small{color:#7b8989}
+.icon-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.icon-box{display:grid;place-items:center;gap:8px;min-height:90px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--glacier)}.icon-box span{font-size:23px}.icon-box b{color:var(--ink);font:500 8px var(--mono)}
+.library-note{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 22px;border:1px solid var(--line);border-radius:10px;background:var(--ice)}.library-note strong{font:700 16px var(--display)}.library-note p{margin:3px 0 0;color:#758384;font-size:11px}
+.footer{padding:40px 0 70px;color:#7a8989;font-size:11px}.footer a{color:var(--glacier);font-weight:700}
+body.dark{--white:#101718;--ink:#f6f8f8;--ice:#182425;--line:#304143;--slate:#b9c5c5;background:#101718}
+body.dark .page-top,body.dark .sidebar,body.dark .card,body.dark .component-card,body.dark .icon-box,body.dark .btn,body.dark .theme{background:#101718}
+body.dark .hero{background:linear-gradient(120deg,#101718,#122c2e)}body.dark .assist-window{background:#182425;border-color:#304143}body.dark .assist-bar{background:#203638}
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr}.sidebar{position:sticky;top:70px;height:auto;z-index:20;padding:8px 14px;border-right:0;border-bottom:1px solid var(--line);overflow:auto}.side-label,.live-card{display:none}.side-nav{display:flex;gap:3px;min-width:max-content}.side-nav a{padding:9px 11px;font-size:11px}.nav-icon{display:none}.hero{grid-template-columns:1fr;min-height:0;padding:62px 30px 48px}.assistance{justify-self:start;width:min(100%,520px)}.section-inner{padding:0 30px}.section-head{grid-template-columns:1fr;gap:14px}.component-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:580px){
+  .page-top{height:62px;padding:0 15px}.layout{min-height:calc(100vh - 62px)}.sidebar{top:62px}.version{display:none}.hero{padding:48px 20px 34px}.hero h1{font-size:51px}.hero-lead{font-size:14px}.assist-body{padding:19px 16px}.assist-heading strong{font-size:19px}.metrics{gap:5px}.metric{padding:10px 7px}.metric b{font-size:13px}.principles{grid-template-columns:1fr}.principle{min-height:0;padding:21px 25px;border-right:0;border-bottom:1px solid var(--line)}.principle:last-child{border-bottom:0}.section{padding:53px 0}.section-inner{padding:0 20px}.card-grid,.component-grid,.reefer-card{grid-template-columns:1fr}.palette-wide{grid-column:span 1}.swatches{grid-template-columns:repeat(2,1fr)}.palette-row{grid-template-columns:repeat(5,1fr)}.icon-grid{grid-template-columns:repeat(3,1fr)}.section-title h2{font-size:36px}
+}
 </style>
 </head>
 <body>
-<header class="top"><a class="brand" href="#"><span class="mark">R</span><span><strong>RITA</strong><small>FIELD OPERATIONS</small></span></a><nav class="nav"><a href="#foundations">Foundations</a><a href="#components">Components</a><a href="#icons">Icons</a><a href="#domain">Domain</a><a href="#sync">Sync</a></nav></header>
-<main class="shell">
-<section class="hero"><div><div class="eyebrow">RITA DESIGN SYSTEM · GITHUB PREVIEW</div><h1>Diseñar para el trabajo real.</h1><p>Una librería visual y operativa para asistencia técnica reefer: clara con señal, resistente sin señal y trazable cuando el trabajo crece.</p></div><div class="hero-side"><div class="stat"><b>78</b><span>archivos versionados</span></div><div class="stat"><b>35</b><span>iconos canónicos</span></div><div class="stat"><b>33</b><span>componentes de producto</span></div></div></section>
+<header class="page-top">
+  <a class="wordmark" href="#introduccion"><span class="logo-symbol"><span>R</span></span><span><b class="wordmark-name">RITA</b><small class="wordmark-sub">Design System</small></span></a>
+  <div class="top-actions"><span class="version">v1.2 · 19 bibliotecas</span><button class="theme" id="themeButton" aria-label="Usar tema oscuro">◔</button></div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="side-label">RITA SYSTEM</div>
+    <nav class="side-nav">
+      <a class="active" href="#introduccion"><span class="nav-icon">⊙</span>Introducción</a>
+      <a href="#marca"><span class="nav-icon">✥</span>Marca</a>
+      <a href="#colores"><span class="nav-icon">◌</span>Colores</a>
+      <a href="#tipografia"><span class="nav-icon">T</span>Tipografía</a>
+      <a href="#espaciado"><span class="nav-icon">▦</span>Espaciado</a>
+      <a href="#componentes"><span class="nav-icon">♧</span>Componentes</a>
+      <a href="#bibliotecas"><span class="nav-icon">▱</span>Bibliotecas</a>
+    </nav>
+    <div class="live-card"><div class="live-title"><i class="live-dot"></i>Sistema vivo</div><p>Preparado para web y móvil</p></div>
+  </aside>
+  <main class="content">
+    <section class="hero" id="introduccion">
+      <div class="hero-copy">
+        <div class="kicker">RITA / 01 <span>·</span> LENGUAJE VISUAL</div>
+        <h1>Diseñar para<br><span>el trabajo real.</span></h1>
+        <p class="hero-lead">Un sistema visual para operaciones reefer: rápido bajo presión, legible bajo el sol y confiable incluso cuando la señal falla.</p>
+        <div class="hero-tags"><span class="tag">Web</span><span class="tag">Android</span><span class="tag">Tablet</span><span class="tag">Offline-first</span></div>
+      </div>
+      <div class="assistance">
+        <div class="assist-window">
+          <div class="assist-bar"><div class="assist-brand"><i>✣</i>RITA</div><div class="sync"><i></i>Sincronizado</div></div>
+          <div class="assist-body">
+            <div class="assist-overline">ASISTENCIA ACTIVA</div>
+            <div class="assist-heading"><strong>MSKU 724019-8</strong><span class="status-pill">En ruta</span></div>
+            <div style="color:#7a8989;font-size:11px;margin-top:4px">Carrier · Shop 275</div>
+            <div class="metrics"><div class="metric"><small>Set point</small><b>-18.0°</b></div><div class="metric"><small>Suministro</small><b>-17.6°</b></div><div class="metric"><small>Retorno</small><b>-16.9°</b></div></div>
+            <div class="progress-label"><span>Registro de asistencia</span><b>3 de 4</b></div><div class="progress"><span></span></div>
+            <div class="assist-actions"><button class="btn">Guardar borrador</button><button class="btn primary">Continuar　›</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="principles">
+      <article class="principle"><div class="principle-num">01</div><h3>Clara</h3><p>La información crítica se entiende en segundos.</p></article>
+      <article class="principle"><div class="principle-num">02</div><h3>Robusta</h3><p>Cada estado funciona con color, texto e icono.</p></article>
+      <article class="principle"><div class="principle-num">03</div><h3>Humana</h3><p>Lenguaje directo, amable y sin ruido técnico.</p></article>
+    </section>
 
-<section class="section" id="foundations"><div class="section-head"><div><h2>Foundations</h2><p>La base visual compartida entre RITA Iquique y RITA Offline.</p></div></div><div class="grid">
-<article class="card"><h3>Paleta RITA</h3><div class="swatches"><div class="swatch" style="background:#075f62">Glacier<br>#075F62</div><div class="swatch" style="background:#129a9a">Bright<br>#129A9A</div><div class="swatch" style="background:#b96d3d">Copper<br>#B96D3D</div><div class="swatch light">Ice<br>#F6F8F8</div></div></article>
-<article class="card type-sample"><h3>Typography</h3><h1>RITA</h1><h2>Reefer intelligence</h2><p>Inter mantiene la lectura y los controles claros.</p><code>MSCU1234567 · RAP · MF-MZ</code></article>
-<article class="card"><h3>Spacing · 4 px grid</h3><div class="ruler"><span><i style="height:16px"></i>4</span><span><i style="height:32px"></i>8</span><span><i style="height:48px"></i>12</span><span><i style="height:64px"></i>16</span><span><i style="height:80px"></i>20</span></div></article>
-<article class="card"><h3>Radii</h3><div class="radii"><div class="radius" style="border-radius:8px">control 8</div><div class="radius" style="border-radius:12px">row 12</div><div class="radius" style="border-radius:16px">card 16</div><div class="radius" style="border-radius:999px">pill</div></div></article>
-</div></section>
+    <section class="section" id="marca"><div class="section-inner">
+      <div class="section-head"><div class="section-number">01 — MARCA Y LOGOTIPOS</div><div class="section-title"><h2>Una firma reconocible<br>en cualquier <em>contexto.</em></h2><p>La marca combina un símbolo térmico-industrial con un wordmark directo. Cada versión conserva proporción, contraste y espacio de protección para funcionar desde un favicon hasta una portada.</p></div></div>
+      <div class="card-grid">
+        <article class="card"><div class="card-label">LOGO PRINCIPAL</div><div class="wordmark" style="margin:20px 0 25px"><span class="logo-symbol"><span>R</span></span><span><b class="wordmark-name" style="font-size:27px">RITA</b><small class="wordmark-sub">FIELD OPERATIONS</small></span></div><p class="card-label" style="margin:0">Uso preferido sobre fondos claros · brand.logo.primary</p></article>
+        <article class="card" style="background:var(--glacier);color:#fff"><div class="card-label" style="color:#a6e8e5">LOGO INVERSO</div><div class="wordmark" style="margin:20px 0 25px"><span class="logo-symbol" style="background:#fff;color:var(--glacier)"><span>R</span></span><span><b class="wordmark-name" style="font-size:27px">RITA</b><small class="wordmark-sub" style="color:#b7dedc">FIELD OPERATIONS</small></span></div><p class="card-label" style="color:#a6e8e5;margin:0">Fondos oscuros y fotografía · brand.logo.inverse</p></article>
+      </div>
+      <div class="card" style="margin-top:16px"><div class="card-label">CONSTRUCTION</div><div style="display:flex;align-items:center;gap:35px;flex-wrap:wrap"><div style="width:130px;height:130px;display:grid;place-items:center;border:1px dashed var(--bright);border-radius:50%;color:var(--glacier);font:700 18px var(--display)">RITA</div><div><h3>Área de seguridad</h3><p class="type-body">1× símbolo alrededor de la marca. Ningún texto, borde o imagen debe entrar en la zona libre.</p><div class="facts"><span class="fact">16—64 px</span><span class="fact">adaptive ready</span><span class="fact">SVG master</span></div></div></div></div>
+    </div></section>
 
-<section class="section" id="components"><div class="section-head"><div><h2>Componentes</h2><p>Controles que representan tareas: buscar, capturar, reparar, adjuntar evidencia y sincronizar.</p></div></div><div class="component-grid">
-<article class="card"><h3>Actions</h3><div class="button-row"><button class="btn primary">Buscar unidad</button><button class="btn">Guardar</button><button class="btn copper">AGREGAR ESTE REPUESTO</button><button class="btn quiet">Sincronizar ahora</button></div><div class="field"><label>ISO Code / CEDEX</label><div class="input focus mono">RAP · MF-MZ</div></div><div class="field"><label>Fabricante</label><div class="input muted">Seleccionar fabricante⌄</div></div></article>
-<article class="card unit"><div class="unit-top"><div><h3>MSCU1234567</h3><span class="muted">Unidad reefer · modificada ahora</span></div><span class="badge offline">◷ Pendiente de envío</span></div><div class="facts"><span class="fact">PTI <b>RAPS</b></span><span class="fact">3 CEDEX</span><span class="fact">2 fotos locales</span></div><div class="button-row"><button class="btn primary">Abrir unidad</button><button class="btn">Editar</button></div></article>
-<article class="card cedex"><h3>CEDEX line</h3><div class="line"><span><b class="mono">RAP</b><br><small class="muted">MF-MZ · Daño + Método VI</small></span><span class="badge teal">CEDEX</span></div><div class="line"><span><b>Responsabilidad</b><br><small class="muted">Seleccionar por línea</small></span><button class="btn quiet">Editar</button></div><div class="line"><div class="photos"><div class="photo">foto 1</div><div class="photo">foto 2</div><div class="photo">+</div></div><span class="muted">2 / 5</span></div></article>
-<article class="card part"><h3>Repuestos añadidos</h3><div class="line"><span><b class="mono">PN-REF-001</b><br><small class="muted">Descripción manual</small></span><b>2 unidad</b></div><div class="line"><span><b class="mono">PN-REF-204</b><br><small class="muted">Sugerencia confirmada</small></span><b>1 pies</b></div><button class="btn copper">AGREGAR ESTE REPUESTO</button></article>
-<article class="card"><h3>States</h3><div class="badges"><span class="badge success">✓ Sincronizada</span><span class="badge offline">◷ Offline</span><span class="badge error">× Error</span><span class="badge teal">● En progreso</span></div><p class="muted">Cada estado combina color, icono y texto.</p></article>
-<article class="card"><h3>Photo evidence</h3><p class="muted">Fotos dentro de la línea ISO, miniaturas pequeñas, máximo cinco y compresión antes de subir.</p><div class="photos"><div class="photo" style="width:76px;height:76px">placa</div><div class="photo" style="width:76px;height:76px">daño</div><div class="photo" style="width:76px;height:76px">+</div></div></article>
-</div></section>
+    <section class="section" id="colores"><div class="section-inner">
+      <div class="section-head"><div class="section-number">02 — COLOR</div><div class="section-title"><h2>Una paleta fría<br>con <em>carácter.</em></h2><p>El turquesa glaciar comunica acción y tecnología. Los neutros de acero sostienen la interfaz; el cobre aporta una firma propia sin competir con los datos.</p></div></div>
+      <div class="card-grid"><article class="card"><div class="card-label">GLACIER · rita.brand.*</div><div class="swatches"><div class="swatch" style="background:#075f62">700<br>#075F62</div><div class="swatch" style="background:#129a9a">500<br>#129A9A</div><div class="swatch" style="background:#36bbb9">400<br>#36BBB9</div><div class="swatch light">50<br>#EAFBFA</div></div></article><article class="card"><div class="card-label">ACCENTOS SEMÁNTICOS</div><div class="status-list"><div class="status ok"><i></i><b>Éxito</b><span>Trabajo enviado</span></div><div class="status off"><i></i><b>Advertencia</b><span>Requiere revisión</span></div><div class="status err"><i></i><b>Error</b><span>Acción bloqueada</span></div></div></article><article class="card palette-wide"><div class="card-label">ALLOY · rita.neutral.*</div><div class="palette-row"><div class="palette-cell light" style="background:#fff">0</div><div class="palette-cell light" style="background:#f6f8f8">50</div><div class="palette-cell light" style="background:#ebefef">100</div><div class="palette-cell" style="background:#d7dede">200</div><div class="palette-cell" style="background:#bac5c5">300</div><div class="palette-cell" style="background:#8d9b9c">400</div><div class="palette-cell" style="background:#697879">500</div><div class="palette-cell" style="background:#414d4e">700</div><div class="palette-cell" style="background:#20292a">900</div><div class="palette-cell" style="background:#101718">950</div></div><p class="type-body">El color nunca trabaja solo. Los estados siempre combinan etiqueta, icono y contraste mínimo AA.</p></article></div>
+    </div></section>
 
-<section class="section" id="icons"><div class="section-head"><div><h2>Icon library</h2><p>Iconos semánticos: el proveedor puede cambiar, el significado operativo no.</p></div></div><div class="icon-grid">
-<div class="icon"><img src="../icons/action-plus.svg" alt=""><b>plus</b></div><div class="icon"><img src="../icons/action-camera.svg" alt=""><b>camera</b></div><div class="icon"><img src="../icons/action-sync.svg" alt=""><b>sync</b></div><div class="icon"><img src="../icons/status-offline.svg" alt=""><b>cloud-off</b></div><div class="icon"><img src="../icons/status-synced.svg" alt=""><b>check</b></div><div class="icon"><img src="../icons/domain-reefer.svg" alt=""><b>reefer</b></div><div class="icon"><img src="../icons/domain-cedex.svg" alt=""><b>cedex</b></div><div class="icon"><img src="../icons/domain-pti.svg" alt=""><b>pti</b></div><div class="icon"><img src="../icons/domain-part.svg" alt=""><b>part</b></div>
-<div class="icon"><span style="font-size:25px">◈</span><b>search</b></div><div class="icon"><span style="font-size:25px">◈</span><b>edit</b></div><div class="icon"><span style="font-size:25px">◈</span><b>save</b></div><div class="icon"><span style="font-size:25px">◈</span><b>trash</b></div><div class="icon"><span style="font-size:25px">◈</span><b>close</b></div><div class="icon"><span style="font-size:25px">◈</span><b>filter</b></div><div class="icon"><span style="font-size:25px">◈</span><b>home</b></div><div class="icon"><span style="font-size:25px">◈</span><b>unit</b></div><div class="icon"><span style="font-size:25px">◈</span><b>serial</b></div><div class="icon"><span style="font-size:25px">◈</span><b>gas</b></div><div class="icon"><span style="font-size:25px">◈</span><b>calendar</b></div><div class="icon"><span style="font-size:25px">◈</span><b>clock</b></div><div class="icon"><span style="font-size:25px">◈</span><b>alert-triangle</b></div><div class="icon"><span style="font-size:25px">◈</span><b>x-circle</b></div><div class="icon"><span style="font-size:25px">◈</span><b>info</b></div><div class="icon"><span style="font-size:25px">◈</span><b>user</b></div><div class="icon"><span style="font-size:25px">◈</span><b>users</b></div><div class="icon"><span style="font-size:25px">◈</span><b>lock</b></div><div class="icon"><span style="font-size:25px">◈</span><b>unlock</b></div>
-</div></section>
+    <section class="section" id="tipografia"><div class="section-inner">
+      <div class="section-head"><div class="section-number">03 — TIPOGRAFÍA</div><div class="section-title"><h2>Precisa, contemporánea<br>y <em>legible.</em></h2><p>Tres familias con funciones claras: Manrope da personalidad a los títulos, Inter ordena la interfaz y JetBrains Mono alinea códigos y mediciones.</p></div></div>
+      <div class="card type-card"><div class="type-line"><span class="type-display">Rita®</span><small>DISPLAY / MANROPE · 64</small></div><div class="type-line"><span class="type-heading">Nueva asistencia</span><small>HEADING / MANROPE · 28</small></div><div class="type-line"><span class="type-body">Agrega la información solicitada para continuar.</span><small>BODY / INTER · 16</small></div><div class="type-line"><span class="type-code">MSCU1234567 · -18.0°C</span><small>DATA / JETBRAINS MONO · 14</small></div></div>
+    </div></section>
 
-<section class="section" id="domain"><div class="section-head"><div><h2>Reefer domain</h2><p>El diseño sigue la lógica de terreno: PTI, CEDEX, PN, fotos y datos de unidad.</p></div></div><div class="grid"><article class="card"><h3>PTI core</h3><div class="button-row"><button class="btn primary">RAPS</button><button class="btn">SHORT</button><button class="btn">LONG</button><button class="btn">CA</button></div><p class="muted">RUNNING y SUPER FREEZER quedan fuera del selector de operador.</p></article><article class="card"><h3>Manual is valid</h3><p>Si catálogo o señal fallan, el técnico conserva el valor escrito y puede guardar para revisión.</p><span class="badge offline">Entrada manual permitida</span></article><article class="card"><h3>Capture rules</h3><div class="facts"><span class="fact">≤ 5 fotos / CEDEX</span><span class="fact">Daño + Método</span><span class="fact">PN explícito</span><span class="fact">MM/YYYY</span></div></article></div></section>
+    <section class="section" id="espaciado"><div class="section-inner">
+      <div class="section-head"><div class="section-number">04 — COMPOSICIÓN</div><div class="section-title"><h2>Ritmo antes<br>que <em>decoración.</em></h2><p>La unidad base es 4 px. Una escala corta y predecible permite construir pantallas densas sin que se sientan apretadas.</p></div></div>
+      <div class="card-grid"><article class="card"><div class="card-label">ESCALA DE ESPACIADO · BASE 4 PX</div><div class="spacing-show"><div><i style="height:16px"></i>4</div><div><i style="height:32px"></i>8</div><div><i style="height:48px"></i>12</div><div><i style="height:64px"></i>16</div><div><i style="height:88px"></i>24</div></div></article><article class="card"><div class="card-label">RADIOS · INDUSTRIAL, NO RÍGIDO</div><div class="radii-grid"><div class="radius" style="border-radius:4px">sm 4</div><div class="radius" style="border-radius:8px">md 8</div><div class="radius" style="border-radius:12px">lg 12</div><div class="radius" style="border-radius:18px">xl 18</div><div class="radius" style="border-radius:99px">full</div></div></article></div>
+    </div></section>
 
-<section class="section" id="sync"><div class="section-head"><div><h2>Offline & sync</h2><p>La cola hace visible la diferencia entre guardado local y confirmación del servidor.</p></div></div><div class="card"><div class="timeline"><div class="step active"><strong>Borrador</strong><small>Persistido en el dispositivo</small></div><div class="step active"><strong>Completa</strong><small>Validación local suficiente</small></div><div class="step active"><strong>Pendiente de envío</strong><small>Esperando conexión</small></div><div class="step"><strong>Sincronizada</strong><small>Confirmada por servidor</small></div></div><div class="button-row" style="margin-top:20px"><button class="btn primary">Sincronizar ahora</button><button class="btn">Revisar conflictos</button></div></div></section>
+    <section class="section" id="componentes"><div class="section-inner">
+      <div class="section-head"><div class="section-number">05 — COMPONENTES</div><div class="section-title"><h2>Una biblioteca<br>para <em>operar.</em></h2><p>Controles sobrios, áreas táctiles amplias y estados que siguen siendo comprensibles con poca luz, guantes o mala conexión.</p></div></div>
+      <div class="component-grid"><article class="component-card"><div class="card-label">ACTIONS</div><h3>Botones</h3><div class="button-stack"><button class="btn primary">Guardar asistencia</button><button class="btn">Guardar borrador</button><button class="btn copper">Agregar línea</button><button class="btn">Eliminar</button></div></article><article class="component-card"><div class="card-label">INPUTS</div><h3>Formularios</h3><div class="field"><label>NÚMERO DE UNIDAD *</label><div class="input focus">MSCU1234567</div></div><div class="field"><label>UBICACIÓN *</label><div class="input">Ruta · Puerto · Local</div></div></article><article class="component-card"><div class="card-label">STATES</div><h3>Estados operativos</h3><div class="status-list"><div class="status ok"><i></i>Sincronizada</div><div class="status off"><i></i>Offline · pendiente de envío</div><div class="status err"><i></i>Error · requiere revisión</div></div></article></div>
+    </div></section>
 
-<footer class="footer">RITA Design System · preview visual versionado en GitHub · <a href="https://github.com/doblvo/RITA-Design">abrir repositorio</a></footer>
-</main>
+    <section class="section" id="bibliotecas"><div class="section-inner">
+      <div class="section-head"><div class="section-number">06 — BIBLIOTECAS</div><div class="section-title"><h2>Diseñado para<br>el trabajo <em>reefer.</em></h2><p>Las piezas visuales representan acciones reales: buscar una unidad, generar PTI, construir CEDEX, adjuntar evidencia y sincronizar cuando vuelve la señal.</p></div></div>
+      <div class="reefer-card"><div><div class="card-label">ASISTENCIA REEFER</div><div class="reefer-code">MSCU1234567</div><p>Carrier · Shop 275 · Registro local</p><div class="facts"><span class="fact">PTI <b>RAPS</b></span><span class="fact">3 CEDEX</span><span class="fact">2 fotos locales</span></div></div><div class="cedex-lines"><div class="cedex-line"><span><b>RAP · MF-MZ</b><br><small>Método VI · componente reefer</small></span><span>›</span></div><div class="cedex-line"><span><b>PTI · RAPS</b><br><small>CEDEX automático bloqueado</small></span><span>›</span></div><div class="cedex-line"><span><b>PN-REF-001</b><br><small>Descripción manual</small></span><span>›</span></div></div></div>
+      <div class="card" style="margin-top:16px"><div class="card-label">ICON LIBRARY · SEMÁNTICA OPERATIVA</div><div class="icon-grid"><div class="icon-box"><span>⊕</span><b>plus</b></div><div class="icon-box"><span>⌁</span><b>camera</b></div><div class="icon-box"><span>↻</span><b>sync</b></div><div class="icon-box"><span>◉</span><b>reefer</b></div><div class="icon-box"><span>⌘</span><b>cedex</b></div><div class="icon-box"><span>✓</span><b>synced</b></div><div class="icon-box"><span>⌕</span><b>search</b></div><div class="icon-box"><span>✎</span><b>edit</b></div><div class="icon-box"><span>▣</span><b>photo</b></div><div class="icon-box"><span>!</span><b>alert</b></div><div class="icon-box"><span>♙</span><b>user</b></div><div class="icon-box"><span>◈</span><b>offline</b></div></div></div>
+      <div class="library-note" style="margin-top:16px"><div><strong>Sistema vivo</strong><p>Tokens, componentes, contratos y ejemplos versionados en GitHub.</p></div><a class="btn primary" href="https://github.com/doblvo/RITA-Design">Abrir repositorio ↗</a></div>
+    </div></section>
+    <footer class="footer section-inner">RITA Design System · visual preview · <a href="https://github.com/doblvo/RITA-Design">doblvo/RITA-Design</a></footer>
+  </main>
+</div>
+<script>
+const themeButton=document.getElementById("themeButton");
+themeButton.addEventListener("click",()=>{document.body.classList.toggle("dark");themeButton.textContent=document.body.classList.contains("dark")?"☼":"◔";themeButton.setAttribute("aria-label",document.body.classList.contains("dark")?"Usar tema claro":"Usar tema oscuro")});
+const links=[...document.querySelectorAll(".side-nav a")];
+const sections=[...document.querySelectorAll("main section[id]")];
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(link=>link.classList.toggle("active",link.getAttribute("href")==="#"+entry.target.id))}}),{rootMargin:"-25% 0px -65% 0px"});
+sections.forEach(section=>observer.observe(section));
+</script>
 </body>
 </html>
