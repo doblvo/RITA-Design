@@ -1,0 +1,9 @@
+{
+  "name":"@rita/design-system",
+  "version":"0.1.0",
+  "private":true,
+  "type":"module",
+  "description":"Tokens, iconos, componentes y patrones de operación reefer para RITA",
+  "scripts":{"validate":"node scripts/validate-design-system.mjs"},
+  "engines":{"node":">=20"}
+}

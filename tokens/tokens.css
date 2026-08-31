@@ -1,0 +1,13 @@
+:root{
+--rita-color-glacier:#075f62;--rita-color-glacier-bright:#129a9a;--rita-color-glacier-dark:#0a4a4d;
+--rita-color-copper:#b96d3d;--rita-color-ink:#101718;--rita-color-slate:#526061;--rita-color-ice:#f6f8f8;--rita-color-white:#fff;
+--rita-color-border:#dce3e3;--rita-color-border-strong:#bac5c5;--rita-color-success:#148a62;--rita-color-warning:#a96708;--rita-color-danger:#c73b4a;--rita-color-focus:#67d2cf;
+--rita-color-action-primary:var(--rita-color-glacier);--rita-color-action-primary-hover:var(--rita-color-glacier-dark);
+--rita-color-domain-cedex:var(--rita-color-glacier);--rita-color-domain-part:var(--rita-color-copper);--rita-color-domain-pti:var(--rita-color-glacier-bright);
+--rita-color-surface-default:var(--rita-color-white);--rita-color-surface-subtle:var(--rita-color-ice);--rita-color-text-primary:var(--rita-color-ink);--rita-color-text-secondary:var(--rita-color-slate);--rita-color-text-muted:#758384;--rita-color-border-default:var(--rita-color-border);
+--rita-color-status-success:var(--rita-color-success);--rita-color-status-warning:var(--rita-color-warning);--rita-color-status-error:var(--rita-color-danger);--rita-color-status-offline:var(--rita-color-copper);
+--rita-font-display:"Manrope","Segoe UI",sans-serif;--rita-font-ui:"Inter","Segoe UI",sans-serif;--rita-font-mono:"JetBrains Mono",Consolas,monospace;
+--rita-space-1:4px;--rita-space-2:8px;--rita-space-3:12px;--rita-space-4:16px;--rita-space-5:20px;--rita-space-6:24px;--rita-space-8:32px;--rita-space-10:40px;--rita-space-12:48px;--rita-space-16:64px;
+--rita-radius-control:8px;--rita-radius-row:12px;--rita-radius-card:16px;--rita-radius-hero:24px;--rita-radius-modal:20px;--rita-radius-pill:999px;
+--rita-motion-micro:120ms;--rita-motion-control:180ms;--rita-motion-panel:260ms;--rita-touch-minimum:44px;
+}

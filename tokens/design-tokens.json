@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "name": "RITA Design Tokens",
+    "version": "0.1.0",
+    "unit": "px",
+    "sources": [
+      "RITA-Offline",
+      "RITA-Iquique"
+    ]
+  },
+  "color": {
+    "raw": {
+      "glacier": "#075F62",
+      "glacierBright": "#129A9A",
+      "glacierDark": "#0A4A4D",
+      "copper": "#B96D3D",
+      "ink": "#101718",
+      "slate": "#526061",
+      "ice": "#F6F8F8",
+      "white": "#FFFFFF",
+      "border": "#DCE3E3",
+      "borderStrong": "#BAC5C5",
+      "success": "#148A62",
+      "warning": "#A96708",
+      "danger": "#C73B4A",
+      "focus": "#67D2CF"
+    },
+    "semantic": {
+      "actionPrimary": "glacier",
+      "actionPrimaryHover": "glacierDark",
+      "domainCedex": "glacier",
+      "domainPart": "copper",
+      "domainPti": "glacierBright",
+      "surfaceDefault": "white",
+      "surfaceSubtle": "ice",
+      "textPrimary": "ink",
+      "textSecondary": "slate",
+      "borderDefault": "border",
+      "statusSuccess": "success",
+      "statusWarning": "warning",
+      "statusError": "danger",
+      "statusOffline": "copper"
+    }
+  },
+  "typography": {
+    "family": {
+      "display": "Manrope, Segoe UI, sans-serif",
+      "ui": "Inter, Segoe UI, sans-serif",
+      "mono": "JetBrains Mono, Consolas, monospace"
+    },
+    "weight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "extrabold": 800
+    },
+    "size": {
+      "xs": "10px",
+      "sm": "12px",
+      "body": "14px",
+      "lg": "16px",
+      "title": "22px",
+      "display": "36px",
+      "hero": "44px"
+    }
+  },
+  "space": {
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "5": "20px",
+    "6": "24px",
+    "8": "32px",
+    "10": "40px",
+    "12": "48px",
+    "16": "64px"
+  },
+  "radius": {
+    "control": "8px",
+    "row": "12px",
+    "card": "16px",
+    "hero": "24px",
+    "modal": "20px",
+    "pill": "999px"
+  },
+  "motion": {
+    "micro": "120ms",
+    "control": "180ms",
+    "panel": "260ms",
+    "ease": "cubic-bezier(.2,.8,.2,1)"
+  },
+  "touch": {
+    "minimum": "44px"
+  },
+  "domain": {
+    "maxPhotosPerCedex": 5,
+    "maxCatalogSuggestions": 5,
+    "ptiCore": [
+      "RAPS",
+      "SHORT",
+      "LONG",
+      "CA"
+    ],
+    "excludedPti": [
+      "RUNNING",
+      "SUPER FREEZER"
+    ]
+  }
+}
